@@ -1,3 +1,27 @@
+---
+title: "About"
+excerpt: "me and my things"
+header:
+  image: /images/logo.png
+  teaser: /images/logo.png
+sidebar:
+  - title: "Role"
+    image: http://placehold.it/350x250
+    image_alt: "logo"
+    text: "Designer, Front-End Developer"
+  - title: "Responsibilities"
+    text: "Reuters try PR stupid commenters should isn't a business model"
+gallery:
+  - url: /images/logo.png
+    image_path: /images/logo.png
+    alt: "placeholder image 1"
+  - url: /images/logo.png
+    image_path:/images/logo.png
+    alt: "placeholder image 2"
+  - url: /images/logo.png
+    image_path: /images/logo.png
+    alt: "placeholder image 3"
+---
 # About
 
 I am a student at UQ studying Electrical Engineering and Computer Science majoring in Machine Learning. I have experience with languages including python, C, Java, Javascript, HTML, SQL and assembly. I am on track to graduate in 2027 with my Dual degree.\
