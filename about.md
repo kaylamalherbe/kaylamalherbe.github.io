@@ -11,16 +11,6 @@ sidebar:
     text: "Designer, Front-End Developer"
   - title: "Responsibilities"
     text: "Reuters try PR stupid commenters should isn't a business model"
-gallery:
-  - url: /images/logo.png
-    image_path: /images/logo.png
-    alt: "placeholder image 1"
-  - url: /images/logo.png
-    image_path:/images/logo.png
-    alt: "placeholder image 2"
-  - url: /images/logo.png
-    image_path: /images/logo.png
-    alt: "placeholder image 3"
 ---
 # About
 
