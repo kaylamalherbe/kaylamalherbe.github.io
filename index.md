@@ -1,7 +1,13 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+
+> I have not failed. I’ve just found 10,000 ways that won’t work
+> - Thomas Edison
+
+Welcome to my Blog of the 10,000 ways I have found things to not work and hopefully also a few ways that things do work as I explore the [fastai course](https://www.fast.ai).
 
 ![Image of fast.ai logo](images/logo.png)
 
-## This is a title
+## About me
+I am a fourth-year student at UQ studying Electrical Engineering and Computer Science majoring in Machine Learning. I have experience with languages including python, C, Java, Javascript, HTML, SQL and assembly. 
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+# Posts
+
