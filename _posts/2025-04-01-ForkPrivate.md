@@ -7,4 +7,4 @@ to the world while plagarism is so highly convicted./
 Using [Method 1 in Brian's blog](https://lovellbrian.github.io/2025/03/23/private.html) I managed to make my repo private finally so that I'm no longer in danger of
 plagarism!!/ Yippy!!/
 
-My repo for Assignment 1 is now here:
+My repo for Assignment 1 is now (here)[https://github.com/kaylamalherbe/fingerprint]
