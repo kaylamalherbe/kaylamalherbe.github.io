@@ -5,6 +5,8 @@
 
 - [Effects of Changing Batch Size](#Effects-of-Changing-Batch-Size)
 
+- [CPU vs GPU](#CPU-vs-GPU)
+
 - [Why Change the Batch Size](#Why-Change-the-Batch-Size)
 
 
@@ -69,6 +71,15 @@ The following table compares the epoch 2 results and total runtime of both visio
 |256 | 15.4 | 0.151909 |	0.171257 |	0.040094 |
 
 From above the default batch size, 64, is the fastest runtime and the smallest error_rate.
+
+## CPU vs GPU
+Recalling that with the cpu_frozen it took 11:25 min to run the same test which is 685 seconds
+So the largest performance difference ratio between gpu and cpu is:
+
+$$ GPU : CPU $$
+$$ 14 : 685 $$
+
+Therefore GPU can be up to 48.9 times faster or just 2% of the runtime of the CPU. This is a significant difference and represents well the desire to use GPU's instead of CPUs for heavy computational programming tasks like Machine learning.
 
 ## Why Change the Batch Size
 Not every problem will be the same so depending on the type of data you have or the type of algorithm you use, different batch sizes might be more accurate or faster to implement. In the above case, the default was the fastest but that won't be the case for all scenarios. Imagine if instead of 200 images we had 2000, the batch size then starts to matter a lot more.
