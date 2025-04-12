@@ -55,6 +55,7 @@ learn = vision_learner(dls, resnet18, metrics=error_rate)
 learn.fine_tune(3)
 ```
 The output of the data looks like this:
+
 ![Training Output](/images/training_output.png)
 
 The following table compares the epoch 2 results and total runtime of both vision_learner and fine_tune:
@@ -70,3 +71,4 @@ The following table compares the epoch 2 results and total runtime of both visio
 From above the default batch size, 64, is the fastest runtime and the smallest error_rate.
 
 ## Why Change the Batch Size
+Not every problem will be the same so depending on the type of data you have or the type of algorithm you use, different batch sizes might be more accurate or faster to implement. In the above case, the default was the fastest but that won't be the case for all scenarios. Imagine if instead of 200 images we had 2000, the batch size then starts to matter a lot more.
