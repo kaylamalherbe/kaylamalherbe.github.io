@@ -13,8 +13,15 @@ after this make sure to open wsl again, rebuild and reopen in dev container to m
 
 If all else fails, reclone the repo and reopen the dev container.
 
-## NOTE:
-Need to use gpufrozen not gpu... 
+## GPU vs GPUfrozen
+Make sure you use GPUfrozen instead of GPU... this won't work in the dev containers
 
-## Second note:
-patience is key, it takes a while to run some code
+## Key Note:
+patience is key, it takes a while to run some code/reopen containers/make sure everything is imported
+
+## If All Else Fails
+If your system is not working properly, try rebooting the WSL subsystem with:
+```
+wsl --shutdown
+```
+A popup window will then ask you to restart wsl. This often fixes it. After restarting wsl, you can restart docker desktop.
