@@ -7,3 +7,5 @@ automobile, bird, cat, and dog.
 | ------| ------------------------------------------|
 | 4m 31.3s | Grabbing 200 examples of birds and woodland photos and resizing took |
 | 9.9s |Training model with visual learner and finetune|
+
+
