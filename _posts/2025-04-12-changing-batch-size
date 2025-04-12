@@ -7,12 +7,64 @@
 
 - [Why Change the Batch Size](#Why-Change-the-Batch-Size)
 
-- [Section 1.2](#section-1-2)
-
-- [Chapter 2](#chapter-2)
 
 ## How to change Batch Size
+When using the fast ai Datablock there are a lot of different parameters we can input or change including the batch size.
+Looking at the [documetnation for fast ai](https://docs.fast.ai/data.block.html) heres how the datablock is built:
+```
+DataBlock.dataloaders (source, path:str='.', verbose:bool=False,
+                        bs:int=64, shuffle:bool=False,
+                        num_workers:int=None, do_setup:bool=True,
+                        pin_memory=False, timeout=0, batch_size=None,
+                        drop_last=False, indexed=None, n=None,
+                        device=None, persistent_workers=False,
+                        pin_memory_device='', wif=None, before_iter=None,
+                        after_item=None, before_batch=None,
+                        after_batch=None, after_iter=None,
+                        create_batches=None, create_item=None,
+                        create_batch=None, retain=None, get_idxs=None,
+                        sample=None, shuffle_fn=None, do_batch=None)
+```
+
+The code proivded in the '00-is-it-a-bird-creating-a-model-from-your-own-data' uses the following Datablock set up:
+
+```
+datablock = DataBlock(
+    blocks=(ImageBlock, CategoryBlock), 
+    get_items=get_image_files, 
+    splitter=RandomSplitter(valid_pct=0.2, seed=42),
+    get_y=parent_label,
+    item_tfms=[Resize(192, method='squish')],
+    batch_tfms=aug_transforms(size=224, min_scale=0.75),
+)
+dls = datablock.dataloaders(path)
+```
+
+We can manipulate this to change the batch size like such:
+
+```
+dls = datablock.dataloaders(path, bs=64)
+```
+Note the datablock stays the same but the dls has the extra batchsize parameter input.
 
 ## Effects of Changing Batch Size
+Running on example with gpufrozen on '00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb'
+Changing the batch size for the dls and then recording results from running the following code:
+``` 
+learn = vision_learner(dls, resnet18, metrics=error_rate)
+learn.fine_tune(3)
+```
+The output of the data looks like this:
+![Training Output](/images/training_output.png)
+
+The following table compares the epoch 2 results and total runtime of both vision_learner and fine_tune:
+
+| Batch Size | Run Time | train_loss | valid_loss | error_rate |
+| ---------- | -------- | ---------- | ---------- | ---------- |
+| 6 |
+| 32 |
+| 64 | 9.9s | 0.126603 | 0.380365 | 0.079439 |
+| 128 | 
+|256 | 
 
 ## Why Change the Batch Size
