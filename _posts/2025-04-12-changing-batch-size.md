@@ -59,12 +59,14 @@ The output of the data looks like this:
 
 The following table compares the epoch 2 results and total runtime of both vision_learner and fine_tune:
 
-| Batch Size | Run Time | train_loss | valid_loss | error_rate |
-| ---------- | -------- | ---------- | ---------- | ---------- |
-| 6 |
-| 32 |
-| 64 | 9.9s | 0.126603 | 0.380365 | 0.079439 |
-| 128 | 
-|256 | 
+| Batch Size | Run Time (s) | train_loss | valid_loss | error_rate |
+| ---------- | ------------ | ---------- | ---------- | ---------- |
+| 6 | 37.2 | 0.121135 |	0.156406 |	0.047170 |
+| 32 | 15.3 | 0.057337 |	0.208017 |	0.047170 |
+| 64 | 14 | 0.066433 |	0.168799 |	0.035377 |
+| 128 | 15.7 | 0.104179 |	0.179669 |	0.047170 |
+|256 | 15.4 | 0.151909 |	0.171257 |	0.040094 |
+
+From above the default batch size, 64, is the fastest runtime and the smallest error_rate.
 
 ## Why Change the Batch Size
