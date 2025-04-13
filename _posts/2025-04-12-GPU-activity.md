@@ -1,15 +1,22 @@
-# GPU Activity
+# GPU Tracking
 The gpu activity can be tracked with the following code segments:
 ```
 nvidia-smi
 ```
 Running nvidia will give useful information about your gpu such as driver version, how many processes are happening, GPU memory usage
 
-The real gpu tracking is nvtop:
+![nvidia-smi output](/images/nvidi-smi.png)
+
+To see real time GPU tracking, call nvtop:
 ```
 nvtop
 ```
 nvtop will bring up a live graph to track the the gpu which gives good intel including memory and gpu usage.
 
 For example running pet_breeds from the fastbook. Downloading the data uses 25%
-![GPU usage](/images/gpu_usage_pet.png)
+![GPU usage](/images/GPU_usage.png)
+
+## ISSUES:
+A issue that can occur in this process is if the gpu reachs 100% memory the remote laptop will kick you off the server. If this happens just exit the server what a few minutes and sign in again. 
+
+![GPU Full memory Error](/images/GPU_error.png)
