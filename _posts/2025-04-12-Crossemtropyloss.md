@@ -17,14 +17,14 @@ Vision_learning uses a pre-trained model to define a new Learner.
 An example of applying vision_learning for image processing is as below:
 
 ```
-learn = vision_learner(dls, resnet34, metrics=error_rate)
-learn.fine_tune(2)
+learn = vision_learner(dls, resnet34, metrics=accuracy_multi)
+learn.fine_tune(3)
 ```
 Where:
 - dls is the Data block dataloarder with the resized images and specified batch size.
-- rsenet is the residual network that influences the neural network and is set to 34 but 
-- metrics is defined as error_rate. [See more on metric options here.](https://docs.fast.ai/metrics.html#multi-label-classification)
-- parameter in fine tune determines the number of epochs (how many times the data is iterated through)
+- rsenet is the residual network that influences the neural network and is set to 34 (see [More on resnet](More-on-resnet) for more info) 
+- metrics is defined as error_rate for a single classifier and accuracy_multi for a multi classifier. [See more on metric options here.](https://docs.fast.ai/metrics.html#multi-label-classification)
+- parameter in fine tune determines the number of epochs (how many times the data is iterated through) (see [Epoch vs Batch Size](Epoch-vs-Batch Size) for more info) 
 
 In this code we haven't define the loss-function for fastai to use so fastai chooses its own appropriate loss function
 based on the kind of data and model you are using. For the scenario of categorising images, fastai uses cross-entropy loss as default.
