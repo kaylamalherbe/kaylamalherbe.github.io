@@ -16,9 +16,7 @@ If all else fails, reclone the repo and reopen the dev container.
 ## GPU vs GPUfrozen
 Make sure you use GPUfrozen instead of GPU... this won't work in the dev containers
 
-# GPU memory issue
-
-## ISSUES:
+## GPU memory issue:
 A issue that can occur in this process is if the gpu reachs 100% memory the remote laptop will kick you off the server. If this happens just exit the server what a few minutes and sign in again. 
 
 ![GPU Full memory Error](/images/GPU_error.png)
