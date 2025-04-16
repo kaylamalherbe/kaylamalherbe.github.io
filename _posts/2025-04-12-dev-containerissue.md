@@ -16,6 +16,24 @@ If all else fails, reclone the repo and reopen the dev container.
 ## GPU vs GPUfrozen
 Make sure you use GPUfrozen instead of GPU... this won't work in the dev containers
 
+# GPU memory issue
+
+## ISSUES:
+A issue that can occur in this process is if the gpu reachs 100% memory the remote laptop will kick you off the server. If this happens just exit the server what a few minutes and sign in again. 
+
+![GPU Full memory Error](/images/GPU_error.png)
+
+The the server doesn't kick you out and the GPU memory is full. An error like this might occur:
+```
+---------------------------------------------------------------------------
+OutOfMemoryError                          Traceback (most recent call last)
+Cell In[17], line 2
+      1 learn = vision_learner(dls, resnet34, metrics=accuracy_multi)
+----> 2 learn.fine_tune(3)
+```
+
+The solution to this is to simply restart the kernal which will get rid of any previously stored models.
+
 ## Key Note:
 patience is key, it takes a while to run some code/reopen containers/make sure everything is imported
 
