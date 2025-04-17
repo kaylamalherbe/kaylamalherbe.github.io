@@ -1,5 +1,9 @@
 # Multiclass loss function
 
+1. TOC
+{:toc}
+
+   
 The default learner for image processing provided by fastai used is vision_learner. [See documentation here.](https://docs.fast.ai/vision.learner.html)
 ```
 vision_learner (dls, arch, normalize=True, n_out=None, pretrained=True,
@@ -49,7 +53,6 @@ The vanishing gradient problem is when the gradients calculated with respect to 
 Without ResNet, each layer learns a direct mapping from input to output. With ResNet, it encourages layers to learn a residual mapping. This means the layers learn the difference between the input and the desired output while allowing the network to easily skip layers that are not contributing to the learning process. This allows networks to use more layers (become deeper) to improve the accuracy of the models while maintaining the stability of convergence and a reasonable runtime cost.
 
 # Cross-Entropy Loss
-## Cross-Entropy Loss
 This is currently the favourite loss function in machine learning.
 
 It uses softmax to convert multi-outputs of a neural network into a probablity distribution. For example multiple euclidian distance scores into a probabilty distribution with values between 0-1. This is essential for machine learning and predicition/classifying models as the outputs need to be a prediction score of the likihood that the input is something. This also ensures that all the values wihtin the output add up to 1 so that it can be mapped on a distribution curve. Softmax replaces argmax because argmax cannot be used for backpropergation. So when we use softmax we can use it in cross-entropy to determine how well the model/neural network fits the data.
