@@ -49,6 +49,22 @@ The vanishing gradient problem is when the gradients calculated with respect to 
 Without ResNet, each layer learns a direct mapping from input to output. With ResNet, it encourages layers to learn a residual mapping. This means the layers learn the difference between the input and the desired output while allowing the network to easily skip layers that are not contributing to the learning process. This allows networks to use more layers (become deeper) to improve the accuracy of the models while maintaining the stability of convergence and a reasonable runtime cost.
 
 # Cross-Entropy Loss
+## Cross-Entropy Loss
+This is currently the favourite loss function in machine learning.
 
+It uses softmax to convert multi-outputs of a neural network into a probablity distribution. For example multiple euclidian distance scores into a probabilty distribution with values between 0-1. This is essential for machine learning and predicition/classifying models as the outputs need to be a prediction score of the likihood that the input is something. This also ensures that all the values wihtin the output add up to 1 so that it can be mapped on a distribution curve. Softmax replaces argmax because argmax cannot be used for backpropergation. So when we use softmax we can use it in cross-entropy to determine how well the model/neural network fits the data.
+
+using the softmax output we can calculated cross-entry 
+
+$$ cross-entropy = - \Sigma Observed * log(softmax/prediciate_prob) $$
+$$ cross-entropy_for_category_1 = -log(softmax_output_of_category_1) $$
+
+This summation is considered the total error which can then be used in backpropergation to train the model to minimise this cross-entropy total error.
+
+Because the cross-entropy is an exponentional function the slope for a really bad result will be very high which will help the model make larger steps to correct itself from terrible predictions. Whereas using a similar method such as sum of mean square residuals will not give such big gradient differences and therefore much smaller steps are given to correct the model meaning the model needs to be run through significantly more steps to train itself whereas cross-entropy can train itself is relativitly few steps. See graph below comparing gradient between cross-entropy and mean squared residual method (from Statquest):
+
+![Cross-Entropy Gradient Advantage](images/cross-entropy.png)
+
+[Stat quest video](https://youtu.be/6ArSys5qHAU?si=wS7FQhaDOHop9xLc)
 
 
