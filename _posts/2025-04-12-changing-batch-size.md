@@ -1,14 +1,6 @@
 # Batch Size in Fastai
-# Table of Contents
-
-- [How to change Batch Size](#How-to-change-Batch-Size)
-
-- [Effects of Changing Batch Size](#Effects-of-Changing-Batch-Size)
-
-- [CPU vs GPU](#CPU-vs-GPU)
-
-- [Why Change the Batch Size](#Why-Change-the-Batch-Size)
-
+1. TOC
+{:toc}
 
 ## How to change Batch Size
 When using the fast ai Datablock there are a lot of different parameters we can input or change including the batch size.
